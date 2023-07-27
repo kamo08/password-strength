@@ -1,0 +1,80 @@
+.container {
+  max-width: 800px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+input {
+  border: 1px solid black;
+  height: 36px;
+  padding: 10px 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
+  margin-top: 20px;
+  background-color: darkblue;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: none;
+  padding: 5px 15px;
+  height: 36px;
+  width: 200px;
+
+  &:disabled {
+    background-color: lightblue;
+  }
+}
+
+//  Password strength styles
+
+.password-strength {
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    display: block;
+    width: 33%;
+    height: 4px;
+    background-color: gray;
+    border-radius: 2px;
+  }
+
+  &.minlength {
+    span {
+      background-color: red;
+    }
+  }
+
+  &.easy {
+    span {
+      &:first-child {
+        background-color: red;
+      }
+    }
+  }
+
+  &.medium {
+    span {
+      &:not(:last-child) {
+        background-color: orange;
+      }
+    }
+  }
+
+  &.strong {
+    span {
+      background-color: green;
+    }
+  }
+}
